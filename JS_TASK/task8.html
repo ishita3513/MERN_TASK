@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      * {
+        background-color: #f4fbf5;
+      }
+      #train {
+        position: relative;
+        left: 0;
+        transition: left 0.5s linear;
+      }
+      hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 10px solid #010000;
+        border-style: dashed;
+        /* margin: 1em 0;
+        padding: 0; */
+      }
+    </style>
+    <script type="text/javascript">
+      var trainElement;
+      var isMoving = false;
+      var animationInterval;
+
+      function init() {
+        trainElement = document.getElementById("train");
+      }
+
+      function moveTrain() {
+        var currentPosition = parseInt(trainElement.style.left) || 0;
+        var newPosition = currentPosition + 10;
+        trainElement.style.left = newPosition + "px";
+
+        if (newPosition >= window.innerWidth) {
+          stopTrain();
+        }
+      }
+
+      function startTrain() {
+        document.getElementById("trn").src="train2.gif";
+        if (!isMoving) {
+          isMoving = true;
+          animationInterval = setInterval(moveTrain, 100);
+        }
+      }
+
+      function stopTrain() {
+        document.getElementById("trn").src="train4.png";
+        if (isMoving) {
+          isMoving = false;
+          clearInterval(animationInterval);
+        }
+      }
+
+      window.onload = init;
+    </script>
+  </head>
+
+  <body>
+    <h1 style="margin: auto;
+    width:200px;">JS-Task8</h1>
+    <div id="train">
+      <img id="trn"  src="train4.png" />
+    </div>
+    <hr/>
+    <button onclick="startTrain()">Start</button>
+    <button onclick="stopTrain()">Stop</button>
+  </body>
+</html>

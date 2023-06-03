@@ -10,16 +10,19 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 1000px;
+        margin: auto;
+        width: 700px;
       }
       
       .form {
         display: flex;
         flex-direction: column;
+        width: 100%;
       }
 
       .form-group {
         display: flex;
+        flex-direction: row;
         align-items: center;
         margin-bottom: 10px;
       }
@@ -29,63 +32,72 @@
         white-space: nowrap;
       }
 
-      .form-group input {
+      /* .form-group input {
         flex: 1;
+      } */
+      .cont1{
+        width:100px;
+        float:left;
+      } 
+      .cont2{
+        width:100px;
+        float: left;
       }
     </style>
   </head>
   <body>
+    <h1 style="margin: auto;
+    width:200px;">HTML-Task7</h1>
     <div class="container">
       <form class="form">
         <div class="form-group">
-          <label
+          <label class="cont1"
             >Full Name:
-            <input type="text" /> </label
+            <input class="cont2" type="text" /> </label
           ><br />
         </div>
         <div class="form-group">
-          <label
+          <label class="cont1"
             >Username:
-            <input type="text" /> </label
+            <input class="cont2" type="text" /> </label
           ><br />
         </div>
         <div class="form-group">
-          <label
-            >Password:
-            <input type="password" /> </label
+          <label class="cont1"
+            >Password: 
+            <input class="cont2" type="password" /> </label
           ><br />
         </div>
         <div class="form-group">
-          <label
+          <label class="cont1"
             >Re Password:
-            <input type="password" /> </label
+            <input class="cont2" type="password" /> </label
           ><br />
         </div>
         <div class="form-group">
-          <label
-            >Address:
-            <input type="text" /> </label
+          <label class="cont1"
+            >Address: 
+            <input class="cont2" type="text" /> </label
           ><br />
         </div>
         <div class="form-group">
-          <label
+          <label class="cont1"
             >Age:
-            <input type="text" /> </label
+            <input class="cont2" type="text" /> </label
           ><br />
         </div>
         <div class="form-group">
-          <label
+          <label class="cont-1"
             >Gender:
-            <div class="dropdown">
               <select>
                 <option value="option1">Male</option>
                 <option value="option2">Female</option>
               </select>
-            </div> </label
+            </label
           ><br />
         </div>
         <div class="form-group">
-          <label><input type="submit" value="Save" /></label>
+          <label class="cont-1"><input type="submit" value="Save" /></label>
         </div>
       </form>
     </div>

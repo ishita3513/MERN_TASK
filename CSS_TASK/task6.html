@@ -1,0 +1,102 @@
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zebra-striped Tables</title>
+    <style>
+      table,
+      caption,
+      tr,
+      th,
+      td {
+        table-layout: fixed;
+        font-family: verdana, sans-serif;
+        padding: 10px 40px;
+        /* text-align: center; */
+        /* border: 1px solid #ddd; */
+        border-collapse: collapse;
+      }
+      table{
+        width:100%;
+      }
+      th{
+        text-align: left;
+        color:white;
+        background-color: #08ac6c;
+      }
+      /* .cap {
+        font-weight: bold;
+        background: #003640;
+        color: #fff;
+      } */
+
+      tr:nth-child(even) {
+        background-color: #d8d8d8;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="margin: auto;
+    width:200px;">CSS-Task6</h1>
+    <table>
+      <!-- <caption class="cap">
+        Profile Information
+      </caption> -->
+      <tr>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+      </tr>
+      <tr>
+        <td>Alfred Futterkiste</td>
+        <td>Maria Andres</td>
+        <td>Germany</td>
+      </tr>
+      <tr>
+        <td>Berglunds snabbkop</td>
+        <td>Christina Berglund</td>
+        <td>Sweden</td>
+      </tr>
+      <tr>
+        <td>Centro Comercial Moctezuma</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+      </tr>
+      <tr>
+        <td>Ernt Handel</td>
+        <td>Ronald Mendel</td>
+        <td>Austria</td>
+      </tr>
+      <tr>
+        <td>Island Trading</td>
+        <td>Helen Bennett</td>
+        <td>UK</td>
+      </tr>
+      <tr>
+        <td>Koniglisch Essen</td>
+        <td>Philip Cramer</td>
+        <td>Germany</td>
+      </tr>
+      <tr>
+        <td>Laughing Bachhus Winecellars</td>
+        <td>Yoshi Tannamuri</td>
+        <td>Canada</td>
+      </tr>
+      <tr>
+        <td>Magazzini Alimentari Riuniti</td>
+        <td>Giovanni Rovelli</td>
+        <td>Italy</td>
+      </tr>
+    </table>
+  </body>
+  <!-- <script>
+    var allRows = document.getElementsByTagName("tr");
+    for(var i = 0; i < allRows.length; i++) {
+        if(i % 2 !== 0) {
+            allRows[i].classList.add("paint-row");
+        }
+    }
+</script> -->
+</html>

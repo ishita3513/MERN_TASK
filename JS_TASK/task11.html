@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="task11.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="form">
+        <div class="inputfield">
+          <label>First Name</label>
+          <input type="text" class="input" />
+        </div>
+
+        <div class="inputfield">
+          <label>Last Name</label>
+          <input type="text" class="input" />
+        </div>
+
+        <div class="inputfield">
+          <label>Email</label>
+          <input type="email" class="input" />
+        </div>
+
+        <div class="inputfield">
+          <label>Password</label>
+          <input type="password" class="input" />
+        </div>
+
+        <div class="inputfield">
+          <label>Re-enter Password</label>
+          <input type="password" class="input" />
+        </div>
+
+        <div class="inputfield">
+          <label>Gender</label>
+          <div class="custom_select">
+            <label for="male"
+              ><input
+                class="gender"
+                type="radio"
+                id="male"
+                name="gender"
+                value="male"
+              />Male</label
+            ><br />
+            <label for="female"
+              ><input
+                class="gender"
+                type="radio"
+                id="female"
+                name="gender"
+                value="female"
+              />Female</label
+            >
+          </div>
+        </div>
+
+        <div class="inputfield">
+          <label>Age</label>
+          <input type="text" class="input" />
+        </div>
+
+        <div class="inputfield">
+          <label>Address</label>
+          <textarea class="textarea"></textarea>
+        </div>
+
+        <div class="inputfield">
+          <label>State</label>
+          <input type="text" class="input" />
+        </div>
+        <div class="inputfield">
+          <label>Country</label>
+          <!-- <input type="text" class="input"> -->
+          <div class="custom_select">
+            <select>
+              <option value="">Choose your country</option>
+              <option value="male">India</option>
+              <option value="female">UK</option>
+              <option value="female">Canada</option>
+              <option value="female">USA</option>
+            </select>
+          </div>
+        </div>
+        <div class="inputfield">
+          <label>Languages known</label>
+          <input type="checkbox" class="input" id="english" />
+          <label>English</label>
+          <input type="checkbox" class="input" id="kannada" />
+          <label>Kannada</label>
+          <input type="checkbox" class="input" id="hindi" />
+          <label>Hindi</label>
+          <input type="checkbox" class="input" id="telugu" />
+          <label>Telugu</label>
+        </div>
+
+        <input
+          style="margin-top: 10px"
+          type="checkbox"
+          class="input"
+          id="declare"
+        />
+        <label style="margin-top: 10px"
+          >Hereby I declare all the given details are true</label
+        >
+        <p style="text-align: right; margin: 10px">
+          Log in to <a href="#">Ethnus</a> website
+        </p>
+
+        <div class="inputfield">
+          <input type="submit" value="Register" class="btn" onclick="" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function clearErrors() {
+        errors = document.getElementsByClassName("formerror");
+        for (let item of errors) {
+          item.innerHTML = "";
+        }
+      }
+      function seterror(id, error) {
+        //sets error inside tag of id
+        element = document.getElementById(id);
+        element.getElementsByClassName("formerror")[0].innerHTML = error;
+      }
+
+      function validateForm() {
+        var returnval = true;
+        clearErrors();
+
+        //perform validation and if validation fails, set the value of returnval to false
+        var name = document.forms["myForm"]["fname"].value;
+        if (name.length < 5) {
+          seterror("name", "*Length of name is too short");
+          returnval = false;
+        }
+
+        if (name.length == 0) {
+          seterror("name", "*Poor");
+          returnval = false;
+        }
+
+        var email = document.forms["myForm"]["femail"].value;
+        if (email.length > 10) {
+          seterror("email", "*Poor Email length is too long");
+          returnval = false;
+        }
+
+        var phone = document.forms["myForm"]["fphone"].value;
+        if (phone.length != 10) {
+          seterror("phone", "*poor, Phone number should be of 10 digits!");
+          returnval = false;
+        }
+
+        var password = document.forms["myForm"]["fpass"].value;
+        if (password.length < 6) {
+          // Quiz: create a logic to allow only those passwords which contain atleast one letter, one number and one special character and one uppercase letter
+          seterror("pass", "*Password should be atleast 6 characters long!");
+          returnval = false;
+        }
+
+        var cpassword = document.forms["myForm"]["fcpass"].value;
+        if (cpassword != password) {
+          seterror("cpass", "*Password and Confirm password should match!");
+          returnval = false;
+        }
+
+        return returnval;
+      }
+    </script>
+  </body>
+</html>

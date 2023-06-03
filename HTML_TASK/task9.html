@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container{
+            border: 5px solid #2c6c7c;
+            /* height:50%; */
+            width: 965px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .container{
+            width: 300px;
+            padding: 10px;
+            border: 1px solid black;
+            height: 200px;
+        }
+        .rowD{
+            display: flex;
+            flex-direction: column;
+        }
+        .colD{
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="margin: auto;
+    width:200px;">HTML-Task9</h1>
+    <div class="flex-container">
+        <div class="rowD">
+            <div class="container">
+                <h1>Frame1</h1>
+                <p>Contents of Frame 1</p>
+            </div>
+            <div class="container">
+                <h1>Frame2</h1>
+                <p>Contents of Frame 2</p>
+            </div>
+        </div>
+        <div class="colD">
+            <div class="container">
+                <h1>Frame3</h1>
+                <p>Contents of Frame 3</p>
+            </div>
+            <div class="container">
+                <h1>Frame4</h1>
+                <p>Contents of Frame 4</p>
+            </div>
+        </div>
+        
+        <!-- <div class="container">
+            <h1>Frame5</h1>
+            <p>Contents of Frame 5</p>
+        </div>
+        <div class="container">
+            <h1>Frame6</h1>
+            <p>Contents of Frame 6</p>
+        </div> -->
+    </div>
+</body>
+</html>

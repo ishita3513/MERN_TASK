@@ -6,91 +6,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .main{
+            margin:auto;
+            width: 50%;
+            
+        }
+        .button{
+            text-align: center;
+        }
       h1 {
         color: #2424e7;
       }
       table{
             table-layout: fixed;
-            width: 100%;
+            width: 70%;
             border: 1px solid black;
+            border-collapse: collapse;
         }
         td {
-            border: 2px solid black;
+            border: 1px solid black;
+            width:30%
         }
+        .declare .log{
+            width: 100%;
+        }
+        .one {
+            text-align: center;
+        }
+        button{
+            padding: 5px;
+            margin: 10px;
+        }
+        .log{
+            text-align: right;
+        }
+        
     </style>
 </head>
 <body>
-    <h1>Registration form</h1>
-    <table class="tble">
-        <tr class="center">
-            <td>First Name</td>
-            <td></td>
-        </tr>
-        <tr class="center">
-            <td>Last Name</td>
-            <td></td>
-        </tr>
-        <tr class="center">
-            <td>Password</td>
-            <td></td>
-        </tr>
-        <tr class="center">
-            <td>Re-enter Password</td>
-            <td></td>
-        </tr>
-        <tr class="center">
-            <td>Gender:</td>
-            <td>
-                <table>
-                    <tr>
-                        <td>
-                            <label>
-                                <input type="radio" id="male" name="gender" value="male" />
-                                <label for="male">Male</label>
-                            </label><br />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label>
-                                <input type="radio" id="female" name="gender" value="female" />
-                                <label for="female">Female</label>
-                            </label><br />
-                        </td>
-                    </tr>
-                </table>
-            </td>
+    <h1 style="margin: auto;
+    width:200px;">HTML-Task8</h1>
+    <div class="main">
+        <h1>Registration form</h1>
+        <table class="tble">
+            <tr class="center">
+                <td class="one">First Name</td>
+                <td></td>
+            </tr>
+            <tr class="center">
+                <td class="one">Last Name</td>
+                <td></td>
+            </tr>
+            <tr class="center">
+                <td class="one">Password</td>
+                <td></td>
+            </tr>
+            <tr class="center">
+                <td class="one">Re-enter Password</td>
+                <td></td>
+            </tr>
+            <tr class="center">
+                <td class="one">Gender:</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                                <label>
+                                    <input type="radio" id="male" name="gender" value="male" />
+                                    <label for="male">Male</label>
+                                </label><br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    <input type="radio" id="female" name="gender" value="female" />
+                                    <label for="female">Female</label>
+                                </label><br />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
 
-        </tr>
-        <tr class="center">
-            <td>Age:</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Address:</td>
-            <td>
-                <label>
-                    <textarea rows="4" cols="25"></textarea>
-                </label>
-            </td>
-        </tr>
-        <tr>
-            <td>State</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Country</td>
-            <td>
-                <label>
-                    <select name="Country">
-                        <option value="Choose your country"></option>
-                        <option value="India"></option>
-                        <option value="US"></option>
-                        <option value="UK"></option>
-                      </select>
-                </label>
-            </td>
-        </tr>
-    </table>
+            </tr>
+            <tr class="center">
+                <td class="one">Age:</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="one">Address:</td>
+                <td>
+                    <label>
+                        <textarea rows="4" cols="15"></textarea>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td class="one">State:</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="one">Country</td>
+                <td>
+                    <label>
+                        <select name="Country">
+                            <option value="Choose your country">Choose your country</option>
+                            <option value="India">India</option>
+                            <option value="US">US</option>
+                            <option value="UK">UK</option>
+                        </select>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td class="one">Languages known</td>
+                <td>
+                    <label>
+                        <input type="checkbox" name="English" />
+                        <label for="English">English</label>
+                        <input type="checkbox" name="Kannada" />
+                        <label for="Kannada">Kannada</label>
+                        <input type="checkbox" name="Hindi" />
+                        <label for="Hindi">Hindi</label>
+                        <input type="checkbox" name="Telugu" />
+                        <label for="Telugu">Telugu</label> 
+                    </label>
+                </td>
+            </tr>
+            
+        </table>
+        <table>
+            <tr>
+                <td class="declare">
+                    <label for="declare">
+                        <input class="declare" type="checkbox" name="declare" />
+                        Hereby I declare all the given details are true</label> 
+                    </label>
+                </td>
+                
+            </tr>
+            <tr>
+                <td class="log" style="margin-left:auto ;margin-right: auto;">
+                    Log in to <a  href="">Ethnus </a> website</tr>
+                </td>
+            </tr>
+        </table>
+        <label><button  type="submit">Register</button></label>
+    </div>
+    
 </body>
 </html>

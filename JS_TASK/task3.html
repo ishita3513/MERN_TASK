@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .center{
+            margin: auto;
+            width:60%;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+        }
+        #fields{
+            text-align: right;
+        }
+        #invalue{
+            /* padding:10px; */
+            margin:10px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea{
+            padding:3px;
+            margin: 5px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="margin: auto;
+    width:200px;">JS-Task3</h1>
+    <div class="center">
+        <div class="container">
+            <div id="fields">
+                <p>Name:</p>
+                <p>Email:</p>
+                <p>Website:</p>
+                <p>Message:</p>
+            </div>
+            <div id="invalue">
+                <form>
+                    <label><input type="text" name="name" required/><span id="name"></span></label>
+                    <label><input  type="email" name="email" required><span id="email"></span></label>
+                    <label><input type="text" name="website"><span id="website"></span></label>
+                    <label><textarea  rows="5" cols="25" name="message"></textarea><span id="msg"></span></label>
+                    <label><button type="button" onclick="myfun()"> Submit</button></label>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function myfun(){
+            let name=document.getElementById("name").textContent;
+            if(name==""){
+                document.getElementById("name").style.color='red';
+                document.getElementById("name").textContent="This field is required.";
+            }
+            let email=document.getElementById("email").textContent;
+            const regex_pattern =/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            if (email=="" || !regex_pattern.test(email)){
+                document.getElementById("email").style.color='red';
+                document.getElementById("email").textContent="A valid email address is required.";
+            }
+            let website=document.getElementById("website").textContent;
+            let pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+                            '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
+                            '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+                            '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+                            '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+                            '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+            if(website=="" || !pattern.test(website)){
+                document.getElementById("website").style.color='red';
+                document.getElementById("website").textContent="A valid url is required.";
+            }
+            let msg=document.getElementById("msg").textContent;
+            if(msg==""){
+                document.getElementById("msg").style.color='red';
+                document.getElementById("msg").textContent="This field is required.";
+            }
+        }
+    </script>
+</body>
+</html>

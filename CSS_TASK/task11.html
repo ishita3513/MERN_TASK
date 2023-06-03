@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .center{
+            margin: auto;
+            width:70%;
+            height:400px;
+            padding: 10px;
+            border:1px solid black;
+            border-style: dotted;
+            background-color: #e0dc3c;
+        }
+        a{
+            color: blue;
+            text-decoration: none;
+        }
+        a:hover{
+            color:#812182;
+        }
+        .container{
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+        .items{
+            padding-top:40px;
+            width:300px;
+            display: flex;
+            flex-direction: column;
+        }
+        .item{
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            margin: 5px;
+            padding: 5px;
+        }
+        hr{
+            border-top:1px dotted #84048c;
+        }
+        #about{
+            width:700px;
+            color: #84048c;
+            padding-left: 10px;
+        }
+        #ack{
+            width: 130px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="margin: auto;
+    width:200px;">CSS-Task11</h1>
+    <div class="center">
+        <div class="container">
+            <div class="items">
+                <div class="item">
+                    <a href="#">Home page</a>
+                    <div class="square"></div>
+                </div>
+                <div class="item">
+                    <a href="#">Musings</a>
+                    <div class="square"></div>
+                </div>
+                <div class="item">
+                    <a href="#">My town</a>
+                    <div class="square"></div>
+                </div>
+                <div class="item">
+                    <a href="#">Links</a>
+                    <div class="square"></div>
+                </div>
+            </div>
+            <div id="about">
+                <h1>My first styled page</h1>
+                <p>Welcome to my styled page!</p>
+                <p>It lacks images, but at least it has style.And it has links, even if they don't go anywhere...</p>
+                <p>There should be more here, but I don't know what yet.</p>
+                <hr>
+                <p id="ack">Made 5 April 2004 by myself.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
